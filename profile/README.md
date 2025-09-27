@@ -1,5 +1,5 @@
 
-![SS Electronics](./pics/logo.png)
+![SS Electronics](../pics/logo.png)
  
 # Welcome to SS Electronics
 
