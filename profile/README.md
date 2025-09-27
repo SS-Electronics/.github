@@ -1,6 +1,3 @@
-
-![SS Electronics](../pics/logo.png)
- 
 # Welcome to SS Electronics
 
 We are an open-source community committed to creating **reliable, scalable, and developer-friendly** solutions in the domain of embedded systems. 
