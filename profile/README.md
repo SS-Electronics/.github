@@ -32,6 +32,8 @@ A solution comprising a test bed, firmware, and scripts that enable continuous t
 ## 📂 Featured Projects
 - **[FreeRTOS-OS](https://github.com/SS-Electronics/FreeRTOS-OS)** →A lightweight real-time OS built on top of the FreeRTOS kernel, designed to support multiple architectures. It provides a modular and efficient base software for embedded applications.
 
+- **[openSIL](https://github.com/SS-Electronics/openSIL)** → Open source framework that can rapidly perform SIL testing of Embedded Projects.
+
 - **[openAUTOSAR](https://github.com/SS-Electronics/openAUTOSAR)** → An open-source AUTOSAR BSW (Basic Software) – providing a flexible and modular foundation for automotive applications, enabling developers to build and customize AUTOSAR-compliant software stacks.
 
 - **[Re-BOOT](https://github.com/SS-Electronics/Re-BOOT)** → A remote booting and OTA update framework, along with associated services for secure and efficient firmware deployment.
