@@ -5,7 +5,7 @@
 ```
   ╔══════════════════════════════════════════════════════╗
   ║                                                      ║
-  ║   SS { Electronics }                                 ║
+  ║   Taksys                                             ║
   ║                                                      ║
   ║   Reliable · Scalable · Developer-Friendly           ║
   ║   Open-Source Embedded Systems Frameworks            ║
@@ -26,13 +26,13 @@
 ![Re-BOOT](https://img.shields.io/github/stars/SS-Electronics/Re-BOOT?style=social)
 ![Re-BOOT-Web](https://img.shields.io/github/stars/SS-Electronics/Re-BOOT-Web?style=social)
 ![PCAN-View-Linux](https://img.shields.io/github/stars/SS-Electronics/PCAN-View-Linux?style=social)
-![ECG_DL](https://img.shields.io/github/stars/SS-Electronics/ECG_DL?style=social)
+![openSIL](https://img.shields.io/github/stars/SS-Electronics/openSIL?style=social)
 
 </div>
 
 ---
 
-## 👋 Welcome to SS Electronics
+## 👋 Welcome to Taksys
 
 We are an open-source community committed to creating **reliable, scalable, and developer-friendly** solutions in the domain of embedded systems.
 
@@ -174,23 +174,30 @@ cansend vcan0 123#DEADBEEF   # send a test frame
 
 ---
 
-### 🧠 [ECG_DL](https://github.com/SS-Electronics/ECG_DL)
+### 🧪 [openSIL](https://github.com/SS-Electronics/openSIL)
 
-[![Stars](https://img.shields.io/github/stars/SS-Electronics/ECG_DL?style=flat-square)](https://github.com/SS-Electronics/ECG_DL/stargazers)
-[![Issues](https://img.shields.io/github/issues/SS-Electronics/ECG_DL?style=flat-square)](https://github.com/SS-Electronics/ECG_DL/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/SS-Electronics/ECG_DL?style=flat-square)](https://github.com/SS-Electronics/ECG_DL/commits)
-[![License](https://img.shields.io/github/license/SS-Electronics/ECG_DL?style=flat-square)](https://github.com/SS-Electronics/ECG_DL/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/SS-Electronics/openSIL?style=flat-square)](https://github.com/SS-Electronics/openSIL/stargazers)
+[![Issues](https://img.shields.io/github/issues/SS-Electronics/openSIL?style=flat-square)](https://github.com/SS-Electronics/openSIL/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/SS-Electronics/openSIL?style=flat-square)](https://github.com/SS-Electronics/openSIL/commits)
+[![License](https://img.shields.io/github/license/SS-Electronics/openSIL?style=flat-square)](https://github.com/SS-Electronics/openSIL/blob/main/LICENSE)
 
-A **modular MATLAB deep learning framework** for training and evaluating CNN models on ECG data from the PTB Database for cardiac disease classification. Supports multiple architectures, automated pipelines, and composable signal processing.
+An **open-source Software-in-the-Loop (SIL) testing framework** for multi-board embedded firmware systems. Describe a complete embedded system in YAML, generate [Renode](https://renode.io) simulation artifacts, and run **deterministic system-level tests** — no physical hardware required.
 
 **Highlights:**
-- Multi-model training: CNN1D and ResNet-inspired ECG classifier
-- `TrainingOrchestrator` manages end-to-end training, checkpointing, and evaluation
-- Composable `AlgorithmPipeline` for preprocessing (normalize, filter, denoise, augment)
-- Classifies 6 conditions: Normal, MI, LBBB, RBBB, Sinus Bradycardia, Atrial Fibrillation
-- PTB Database integration, train/val split, early stopping, model comparison tools
+- YAML-based system description with semantic validation
+- Runs real firmware ELF images on virtual boards over virtual UART/CAN buses
+- Renode simulation artifact generation from a backend-neutral data model
+- Robot Framework test generation with JSON result reporting
+- Python CLI: `validate`, `generate`, `run`, `test`, `clean`, `gui`
+- Built for multi-board integration testing in automotive, robotics, and industrial systems
 
-> **Requires:** MATLAB R2023b or later · PTB Database
+> **Requires:** Python 3.11+ · Renode
+
+```bash
+opensil validate system.yaml      # check the system description
+opensil generate system.yaml      # emit Renode + Robot artifacts
+opensil test system.yaml          # run deterministic system-level tests
+```
 
 ---
 
