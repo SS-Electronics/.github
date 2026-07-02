@@ -25,7 +25,7 @@
 ![FreeRTOS-OS](https://img.shields.io/github/stars/SS-Electronics/FreeRTOS-OS?style=social)
 ![Re-BOOT](https://img.shields.io/github/stars/SS-Electronics/Re-BOOT?style=social)
 ![Re-BOOT-Web](https://img.shields.io/github/stars/SS-Electronics/Re-BOOT-Web?style=social)
-![PCAN-View-Linux](https://img.shields.io/github/stars/SS-Electronics/PCAN-View-Linux?style=social)
+![CANoScope](https://img.shields.io/github/stars/SS-Electronics/CANoScope?style=social)
 ![openSIL](https://img.shields.io/github/stars/SS-Electronics/openSIL?style=social)
 
 </div>
@@ -148,12 +148,12 @@ sudo systemctl enable reboot-web && sudo systemctl start reboot-web
 
 ---
 
-### 📡 [PCAN-View-Linux](https://github.com/SS-Electronics/PCAN-View-Linux)
+### 📡 [CANoScope](https://github.com/SS-Electronics/CANoScope)
 
-[![Stars](https://img.shields.io/github/stars/SS-Electronics/PCAN-View-Linux?style=flat-square)](https://github.com/SS-Electronics/PCAN-View-Linux/stargazers)
-[![Issues](https://img.shields.io/github/issues/SS-Electronics/PCAN-View-Linux?style=flat-square)](https://github.com/SS-Electronics/PCAN-View-Linux/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/SS-Electronics/PCAN-View-Linux?style=flat-square)](https://github.com/SS-Electronics/PCAN-View-Linux/commits)
-[![License](https://img.shields.io/github/license/SS-Electronics/PCAN-View-Linux?style=flat-square)](https://github.com/SS-Electronics/PCAN-View-Linux/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/SS-Electronics/CANoScope?style=flat-square)](https://github.com/SS-Electronics/CANoScope/stargazers)
+[![Issues](https://img.shields.io/github/issues/SS-Electronics/CANoScope?style=flat-square)](https://github.com/SS-Electronics/CANoScope/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/SS-Electronics/CANoScope?style=flat-square)](https://github.com/SS-Electronics/CANoScope/commits)
+[![License](https://img.shields.io/github/license/SS-Electronics/CANoScope?style=flat-square)](https://github.com/SS-Electronics/CANoScope/blob/main/LICENSE)
 
 An **open-source CAN bus monitor and analyser for Linux**, inspired by PEAK-System PCAN-View. Uses the Linux SocketCAN subsystem (`PF_CAN / SOCK_RAW`) with a GTK 3 GUI featuring real-time tracing, message transmission, bus-load metering, and CSV recording.
 
@@ -162,12 +162,13 @@ An **open-source CAN bus monitor and analyser for Linux**, inspired by PEAK-Syst
 - Real-time trace: sequence #, direction, timestamp, ID, DLC, data
 - Live bus-load bar, error frame highlighting, message deduplication
 - One-shot and cyclic message transmit
+- DBC-aware **Signal Analysis Viewer** — oscilloscope plots with multiple colour-coded Y axes showing real physical values and units
 - Works with virtual CAN (`vcan0`) for off-hardware testing
 - Pluggable driver vtable — easy to add new CAN back-ends
 
 ```bash
 sudo modprobe vcan && sudo ip link add dev vcan0 type vcan && sudo ip link set up vcan0
-make && ./pcan-view
+make && ./canoscope
 # File > Connect → select vcan0 → Connect
 cansend vcan0 123#DEADBEEF   # send a test frame
 ```
